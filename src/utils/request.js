@@ -6,7 +6,6 @@ import { message } from 'antd';
 Axios.defaults.timeout = 60000;
 Axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
 Axios.defaults.withCredentials = false;//保证同一用户登录后每次请求后台的sessionId一致
-
 var request = function(type, url, params, isToast, responseType = 'json'){
   type = type || 'get';
   if (!url) throw new Error('请指定url');
