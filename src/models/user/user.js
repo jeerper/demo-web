@@ -39,7 +39,7 @@ export default {
      */
     effects: {
         *getListData({payload:{searchParams = {}}},{ call,put,select }) {
-          let {list, isView} = yield select(state=>state.user);
+          let {pageIndex, isView} = yield select(state=>state.user);
           const data = yield call(service.getListData,{pageIndex,params:searchParams});
           if(data.code == '200'){
               yield put({

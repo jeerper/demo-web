@@ -1,4 +1,4 @@
-const API = 'http://localhost:1111';
+const API = 'http://localhost:45009';
 const config = {
     name: '三维BIM协同管理平台',
     prefix: 'bim',
@@ -10,7 +10,7 @@ const config = {
         deleteObject: `${API}/user/deletes`,
         updateObject: `${API}/user/update-by-id`,
         getObjectById:`${API}/user/gets-by-id`,
-        getListData:  `${API}/user/gets`,
+        getListData:  `${API}/user/findUsersByPages`,
     },
 };
 export default config;
